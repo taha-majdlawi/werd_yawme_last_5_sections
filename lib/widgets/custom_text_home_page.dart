@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomeTextForHomePage extends StatelessWidget {
@@ -22,12 +21,29 @@ class CustomeTextForHomePage extends StatelessWidget {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 12.0, right: 20, bottom: 50),
+          padding: const EdgeInsets.only(top: 12.0, right: 20, bottom: 20),
           child: Text(
             textAlign: TextAlign.right,
             " ابدأ يومك و لو بآية من الذكر الحكيم تنير دربك وتبارك بها يومك",
             style: TextStyle(fontFamily: 'Amiri'),
           ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 12.0, right: 20, bottom: 00),
+              child: Text(
+                textAlign: TextAlign.right,
+                'هذه السور الخاصة بالجزء السادس من الورد اليومي',
+                style: TextStyle(
+                  fontFamily: 'Amiri',
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
         ),
       ],
     );
