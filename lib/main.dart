@@ -16,8 +16,26 @@ void main() async {
   );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool _isDarkMode = false;
+
+  ThemeData _getThemeData(FontSizeProvider fontSizeProvider, bool isDarkMode) {
+    return ThemeData(
+      brightness: isDarkMode ? Brightness.dark : Brightness.light,
+      textTheme: TextTheme(
+        bodyLarge: TextStyle(fontSize: fontSizeProvider.fontSize),
+        bodyMedium: TextStyle(fontSize: fontSizeProvider.fontSize),
+        bodySmall: TextStyle(fontSize: fontSizeProvider.fontSize),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +43,20 @@ class MyApp extends StatelessWidget {
       builder: (context, fontSizeProvider, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            textTheme: TextTheme(
-              bodyLarge: TextStyle(fontSize: fontSizeProvider.fontSize),
-              bodyMedium: TextStyle(fontSize: fontSizeProvider.fontSize),
-              bodySmall: TextStyle(fontSize: fontSizeProvider.fontSize),
-            ),
+          theme: _getThemeData(fontSizeProvider, _isDarkMode),
+          home: HomePage(
+            isDarkMode: _isDarkMode,
+            onThemeChanged: (bool value) {
+              setState(() {
+                _isDarkMode = value;
+              });
+            },
+            onFontSizeChanged: (double value) {
+              fontSizeProvider.setFontSize(
+                value,
+              ); // تغيير حجم الخط من الـ provider
+            },
           ),
-          home: HomePage(),
         );
       },
     );
