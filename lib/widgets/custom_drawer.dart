@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:lastfivesectionsofquran/screens/change_font_size_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -11,6 +10,8 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor:
+          isDarkMode ? Color(0xff1C1C22) : Color.fromARGB(255, 227, 226, 234),
       child: ListView(
         children: [
           DrawerHeader(
