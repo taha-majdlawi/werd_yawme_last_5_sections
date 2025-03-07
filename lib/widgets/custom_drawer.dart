@@ -15,13 +15,15 @@ class CustomDrawer extends StatelessWidget {
       child: ListView(
         children: [
           DrawerHeader(
-            child: DrawerHeader(
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 196, 185, 153),
-              ),
-              child: Text(
-                'الإعدادات',
-                style: TextStyle(fontSize: 24, fontFamily: 'Amiri'),
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 196, 185, 153),
+            ),
+            child: Text(
+              'الإعدادات',
+              style: TextStyle(
+                fontSize: 25,
+                fontFamily: 'Amiri',
+                color: Colors.black,
               ),
             ),
           ),

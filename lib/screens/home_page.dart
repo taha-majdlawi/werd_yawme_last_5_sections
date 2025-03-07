@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lastfivesectionsofquran/screens/change_font_size_screen.dart';
 import 'package:lastfivesectionsofquran/widgets/custom_drawer.dart';
+import 'package:lastfivesectionsofquran/widgets/custom_surah_list_tile.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatelessWidget {
@@ -32,8 +33,10 @@ class HomePage extends StatelessWidget {
         isDarkMode: isDarkMode,
         onThemeChanged: onThemeChanged,
       ),
-      body: Center(
-        child: Text('نص تجريبي', style: TextStyle(fontFamily: 'Amiri')),
+      body: ListView.builder(
+        itemBuilder: (context, index) {
+          return CustomSurahListTile();
+        },
       ),
     );
   }
