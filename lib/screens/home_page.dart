@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lastfivesectionsofquran/screens/change_font_size_screen.dart';
 import 'package:lastfivesectionsofquran/widgets/custom_drawer.dart';
 import 'package:lastfivesectionsofquran/widgets/custom_surah_list_tile.dart';
+import 'package:lastfivesectionsofquran/widgets/custom_text_home_page.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatelessWidget {
@@ -33,10 +34,18 @@ class HomePage extends StatelessWidget {
         isDarkMode: isDarkMode,
         onThemeChanged: onThemeChanged,
       ),
-      body: ListView.builder(
-        itemBuilder: (context, index) {
-          return CustomSurahListTile();
-        },
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(child: CustomeTextForHomePage()),
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                return CustomSurahListTile();
+              },
+              childCount: 10, // Replace with your actual list length
+            ),
+          ),
+        ],
       ),
     );
   }
