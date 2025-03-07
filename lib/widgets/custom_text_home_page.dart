@@ -32,7 +32,7 @@ class CustomeTextForHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 12.0, right: 20, bottom: 00),
+              padding: const EdgeInsets.only(top: 12.0, right: 20, bottom: 10),
               child: Text(
                 textAlign: TextAlign.right,
                 'هذه السور الخاصة بالجزء السادس من الورد اليومي',
