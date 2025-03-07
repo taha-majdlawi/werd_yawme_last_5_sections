@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lastfivesectionsofquran/constants.dart';
 import 'package:lastfivesectionsofquran/screens/change_font_size_screen.dart';
 import 'package:lastfivesectionsofquran/widgets/custom_drawer.dart';
 import 'package:lastfivesectionsofquran/widgets/custom_surah_list_tile.dart';
@@ -40,9 +41,9 @@ class HomePage extends StatelessWidget {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (context, index) {
-                return CustomSurahListTile();
+                return CustomSurahListTile(surah: surahs[index],);
               },
-              childCount: 10, // Replace with your actual list length
+              childCount: surahs.length, // Replace with your actual list length
             ),
           ),
         ],

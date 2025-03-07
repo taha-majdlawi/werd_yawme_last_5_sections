@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:lastfivesectionsofquran/models/surah_model.dart';
 
 class CustomSurahListTile extends StatelessWidget {
-  const CustomSurahListTile({super.key});
-
+  const CustomSurahListTile({super.key, required this.surah});
+  final Surah surah;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -10,15 +11,15 @@ class CustomSurahListTile extends StatelessWidget {
       elevation: 5,
       child: ListTile(
         leading: Text(
-          '1-6',
-          style: TextStyle(fontFamily: 'Amiri', fontSize: 18),
+          textAlign: TextAlign.right,
+          surah.surahNumber.toString(),
+          style: TextStyle(fontSize: 20),
         ),
         title: Text(
           textAlign: TextAlign.right,
-          'الاحقاف',
-          style: TextStyle(fontFamily: 'Amiri', fontSize: 18),
+          surah.surahName,
+          style: TextStyle(fontFamily: 'Amiri'),
         ),
-        subtitle: Text(textAlign: TextAlign.right, '1'),
       ),
     );
   }
