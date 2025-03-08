@@ -18,11 +18,6 @@ class ShowWerdScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text(
-            "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-            style: TextStyle(fontFamily: 'Amiri', fontSize: 25),
-          ),
-          SizedBox(height: 20),
           Expanded(
             child: ListView.builder(
               itemCount: werd.ayats.length,
