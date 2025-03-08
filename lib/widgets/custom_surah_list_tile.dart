@@ -9,13 +9,18 @@ class CustomSurahListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return ShowAllWerdsForSurah(surah: surah);
-        }));
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return ShowAllWerdsForSurah(surah: surah);
+            },
+          ),
+        );
       },
       child: Card(
         margin: EdgeInsets.only(left: 8, right: 8, bottom: 10),
-        elevation: 5,
+        elevation: 1,
         child: ListTile(
           leading: Text(
             textAlign: TextAlign.right,
