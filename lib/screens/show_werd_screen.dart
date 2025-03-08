@@ -28,15 +28,11 @@ class ShowWerdScreen extends StatelessWidget {
               itemCount: werd.ayats.length,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.only(
-                    bottom: 20.0,
-                    left: 20,
-                    right: 20,
-                  ),
+                  padding: const EdgeInsets.only(left: 20, right: 20),
                   child: Text(
                     textAlign: TextAlign.right,
                     werd.ayats[index],
-                    style: TextStyle(fontFamily: 'Amiri'),
+                    style: TextStyle(fontFamily: 'Amiri', height: 2),
                   ),
                 );
               },
