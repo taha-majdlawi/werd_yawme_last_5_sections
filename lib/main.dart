@@ -26,17 +26,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   bool _isDarkMode = false;
 
-  ThemeData _getThemeData(FontSizeProvider fontSizeProvider, bool isDarkMode) {
-    return ThemeData(
-      brightness: isDarkMode ? Brightness.dark : Brightness.light,
-      textTheme: TextTheme(
-        bodyLarge: TextStyle(fontSize: fontSizeProvider.fontSize),
-        bodyMedium: TextStyle(fontSize: fontSizeProvider.fontSize),
-        bodySmall: TextStyle(fontSize: fontSizeProvider.fontSize),
-      ),
-    );
-  }
-
+ 
   @override
   Widget build(BuildContext context) {
     return Consumer<FontSizeProvider>(
@@ -54,11 +44,22 @@ class _MyAppState extends State<MyApp> {
             onFontSizeChanged: (double value) {
               fontSizeProvider.setFontSize(
                 value,
-              ); // تغيير حجم الخط من الـ provider
+              );
             },
           ),
         );
       },
     );
   }
+   ThemeData _getThemeData(FontSizeProvider fontSizeProvider, bool isDarkMode) {
+    return ThemeData(
+      brightness: isDarkMode ? Brightness.dark : Brightness.light,
+      textTheme: TextTheme(
+        bodyLarge: TextStyle(fontSize: fontSizeProvider.fontSize),
+        bodyMedium: TextStyle(fontSize: fontSizeProvider.fontSize),
+        bodySmall: TextStyle(fontSize: fontSizeProvider.fontSize),
+      ),
+    );
+  }
+
 }

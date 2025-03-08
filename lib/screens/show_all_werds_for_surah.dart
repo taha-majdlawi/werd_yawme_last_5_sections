@@ -11,7 +11,9 @@ class ShowAllWerdsForSurah extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 227, 226, 234),
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 227, 226, 234),
         title: Text(surah.surahName, style: TextStyle(fontFamily: 'Amiri')),
         centerTitle: true,
       ),
