@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:lastfivesectionsofquran/helper/font_size_provider.dart';
 import 'package:lastfivesectionsofquran/screens/home_page.dart' show HomePage;
 import 'package:provider/provider.dart';
-
+import 'package:hive_flutter/hive_flutter.dart';
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter(); 
+
   WidgetsFlutterBinding.ensureInitialized();
   final fontSizeProvider = FontSizeProvider();
   await fontSizeProvider.loadFontSize();
