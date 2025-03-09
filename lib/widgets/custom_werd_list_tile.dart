@@ -19,17 +19,27 @@ class CustomWerdListTile extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return ShowWerdScreen(werd: surah.werd[index],surahName: surah.surahName,);
+              return ShowWerdScreen(
+                werd: surah.werd[index],
+                surahName: surah.surahName,
+              );
             },
           ),
         );
       },
-      child: Card(
-        child: ListTile(
-          title: Center(
-            child: Text(
-              surah.werd[index].werdFromTo,
-              style: TextStyle(fontFamily: 'Amiri', fontSize: 20),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 5.0),
+        child: Card(
+          child: ListTile(
+            leading: IconButton(
+              icon: Icon(Icons.star_border_outlined),
+              onPressed: () {},
+            ),
+            title: Center(
+              child: Text(
+                surah.werd[index].werdFromTo,
+                style: TextStyle(fontFamily: 'Amiri', fontSize: 20),
+              ),
             ),
           ),
         ),

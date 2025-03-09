@@ -25,7 +25,7 @@ class CustomSurahListTile extends StatelessWidget {
           leading: Text(
             textAlign: TextAlign.right,
             surah.surahNumber.toString(),
-            style: TextStyle(fontSize: 20),
+            style: TextStyle(fontSize: 20,fontFamily: 'Amiri'),
           ),
           title: Text(
             textAlign: TextAlign.right,

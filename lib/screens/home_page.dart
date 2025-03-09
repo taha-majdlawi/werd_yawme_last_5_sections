@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lastfivesectionsofquran/constants.dart';
 import 'package:lastfivesectionsofquran/screens/change_font_size_screen.dart';
 import 'package:lastfivesectionsofquran/widgets/custom_drawer.dart';
+import 'package:lastfivesectionsofquran/widgets/custom_fav_button.dart';
 import 'package:lastfivesectionsofquran/widgets/custom_surah_list_tile.dart';
 import 'package:lastfivesectionsofquran/widgets/custom_text_home_page.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -22,9 +23,7 @@ class HomePage extends StatelessWidget {
       backgroundColor:
           isDarkMode ? Colors.black : Color.fromARGB(255, 227, 226, 234),
       appBar: AppBar(
-        actions: [
-          CustomFavButton(),
-        ],
+        actions: [CustomFavButton()],
         backgroundColor:
             isDarkMode ? Colors.black : Color.fromARGB(255, 227, 226, 234),
 
