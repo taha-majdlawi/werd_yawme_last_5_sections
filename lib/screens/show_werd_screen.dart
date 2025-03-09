@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:lastfivesectionsofquran/models/surah_model.dart';
 
 class ShowWerdScreen extends StatelessWidget {
-  const ShowWerdScreen({super.key, required this.werd});
+  const ShowWerdScreen({
+    super.key,
+    required this.werd,
+    required this.surahName,
+  });
   final Werd werd;
+  final String surahName;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +17,7 @@ class ShowWerdScreen extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 227, 226, 234),
         title: Text(
           textAlign: TextAlign.right,
-          werd.werdFromTo,
+          werd.werdFromTo + '          ' + surahName,
           style: TextStyle(fontFamily: 'Amiri'),
         ),
       ),

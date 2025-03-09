@@ -19,7 +19,7 @@ class CustomWerdListTile extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return ShowWerdScreen(werd: surah.werd[index]);
+              return ShowWerdScreen(werd: surah.werd[index],surahName: surah.surahName,);
             },
           ),
         );
