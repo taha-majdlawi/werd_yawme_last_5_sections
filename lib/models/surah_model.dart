@@ -1,14 +1,22 @@
-class Surah {
+import 'package:hive/hive.dart';
+import 'package:lastfivesectionsofquran/models/werd_model.dart';
+
+part 'surah_model.g.dart'; // تأكد من إضافة هذا السطر
+
+@HiveType(typeId: 0) // ✅ كل كلاس يجب أن يكون له typeId فريد
+class Surah extends HiveObject {
+  @HiveField(0)
   final int surahNumber;
+
+  @HiveField(1)
   final String surahName;
-  final List<Werd> werd;
 
-  Surah( {required this.surahName, required this.surahNumber, required this.werd});
-}
+  @HiveField(2)
+  final List<Werd> werd; // ✅ تأكد أن `Werd` لديه Adapter أيضًا
 
-class Werd {
-  final String werdFromTo;
-  final List<String> ayats;
-
-  Werd({required this.werdFromTo, required this.ayats});
+  Surah({
+    required this.surahNumber,
+    required this.surahName,
+    required this.werd,
+  });
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:lastfivesectionsofquran/constants.dart';
+import 'package:lastfivesectionsofquran/models/model_to_store_werd.dart';
 import 'package:lastfivesectionsofquran/models/surah_model.dart';
 
 import 'package:lastfivesectionsofquran/widgets/custom_werd_list_tile.dart';
@@ -13,19 +14,19 @@ class FavScreen extends StatefulWidget {
 }
 
 class _FavScreenState extends State<FavScreen> {
-  List<Surah> favWerd = [];
+  List<WerdToStore> favWerd = [];
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-  getFavList();
+    getFavList();
   }
 
   void getFavList() async {
-    favWerd = await Hive.box<Surah>(kBoxName).values.toList();
+    favWerd = await Hive.box<WerdToStore>(kBoxName).values.toList();
     if (favWerd.isEmpty) {
       print('true');
-    }else{
+    } else {
       print('fasle');
     }
     setState(() {});
@@ -34,9 +35,14 @@ class _FavScreenState extends State<FavScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // body: ListView.builder(
-      //   itemBuilder: (context, index) => CustomWerdListTile(surah: favWerd[index], index: index),
-      // ),
+      body: ListView.builder(
+        itemCount: favWerd.length,
+        itemBuilder:
+            (context, index) => CustomWerdListTile(
+              surah: favWerd[index].surah,
+              index: favWerd[index].index,
+            ),
+      ),
     );
   }
 }
