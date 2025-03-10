@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:lastfivesectionsofquran/constants.dart';
 import 'package:lastfivesectionsofquran/models/surah_model.dart';
+
 import 'package:lastfivesectionsofquran/screens/show_werd_screen.dart';
 
 class CustomWerdListTile extends StatelessWidget {
@@ -33,7 +36,11 @@ class CustomWerdListTile extends StatelessWidget {
           child: ListTile(
             leading: IconButton(
               icon: Icon(Icons.star_border_outlined),
-              onPressed: () {},
+              onPressed: () async{
+            //      if (Hive.box<Surah>(kBoxName).containsKey( surah.werd[index].key)) return;
+            // var SurahBox = Hive.box<Surah>(kBoxName);
+            // await SurahBox.add( surah);
+              },
             ),
             title: Center(
               child: Text(

@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:lastfivesectionsofquran/constants.dart';
 import 'package:lastfivesectionsofquran/helper/font_size_provider.dart';
+import 'package:lastfivesectionsofquran/models/model_to_store_werd.dart';
+import 'package:lastfivesectionsofquran/models/surah_model.dart';
+
 import 'package:lastfivesectionsofquran/screens/home_page.dart' show HomePage;
 import 'package:provider/provider.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter(); 
+
+Hive.registerAdapter(WerdToStoreAdapter()); 
+
+await Hive.openBox<WerdToStore>(kBoxName);
 
   WidgetsFlutterBinding.ensureInitialized();
   final fontSizeProvider = FontSizeProvider();

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lastfivesectionsofquran/models/surah_model.dart';
 
+
 class ShowWerdScreen extends StatelessWidget {
   const ShowWerdScreen({
     super.key,
