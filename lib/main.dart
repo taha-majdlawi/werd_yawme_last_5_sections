@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lastfivesectionsofquran/constants.dart';
+import 'package:lastfivesectionsofquran/cubit/audio_cubit/audio_state.dart' show AudioInitial;
 import 'package:lastfivesectionsofquran/helper/font_size_provider.dart';
 import 'package:lastfivesectionsofquran/models/model_to_store_werd.dart';
 import 'package:lastfivesectionsofquran/models/surah_model.dart';
@@ -8,26 +10,35 @@ import 'package:lastfivesectionsofquran/models/werd_model.dart';
 import 'package:lastfivesectionsofquran/screens/home_page.dart' show HomePage;
 import 'package:provider/provider.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+
+import 'cubit/audio_cubit/audio_cubit.dart' show AudioCubit;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter(); 
 
-Hive.registerAdapter(WerdToStoreAdapter()); 
+  Hive.registerAdapter(WerdToStoreAdapter()); 
   Hive.registerAdapter(SurahAdapter());
   Hive.registerAdapter(WerdAdapter());
-await Hive.openBox<WerdToStore>(kBoxName);
+  await Hive.openBox<WerdToStore>(kBoxName);
 
-  WidgetsFlutterBinding.ensureInitialized();
   final fontSizeProvider = FontSizeProvider();
   await fontSizeProvider.loadFontSize();
 
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => fontSizeProvider,
-      child: MyApp(),
+    MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => AudioCubit(AudioInitial()),
+        ),
+      ],
+      child: ChangeNotifierProvider(
+        create: (context) => fontSizeProvider,
+        child: MyApp(),
+      ),
     ),
   );
 }
+
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});

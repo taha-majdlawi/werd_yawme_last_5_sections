@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lastfivesectionsofquran/cubit/audio_cubit/audio_state.dart';
+import 'package:lastfivesectionsofquran/models/werd_model.dart';
 
 
 class AudioCubit extends Cubit<AudioState> {
@@ -23,13 +24,13 @@ class AudioCubit extends Cubit<AudioState> {
     }
   }
 
-  // Future<void> playAllAyat(List<AyatModel> ayatList) async {
-  //   for (var ayah in ayatList) {
-  //     await playAudio(ayah.mp3File); // Waits for this Ayah to finish
-  //     emit(IsPlaying());
-  //     await waitForCompletion(); // Ensures we wait for audio to complete
-  //   }
-  // }
+  Future<void> playAllAyat(List<Werd> werdList) async {
+    for (var werd in werdList) {
+      await playAudio(werd.werdFromTo); // Waits for this Ayah to finish
+      emit(IsPlaying());
+      await waitForCompletion(); // Ensures we wait for audio to complete
+    }
+  }
 
   /// Function to wait until the current audio is finished
   Future<void> waitForCompletion() async {

@@ -17,6 +17,7 @@ class WerdAdapter extends TypeAdapter<Werd> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return Werd(
+      mp3File: fields[2] as String?,
       werdFromTo: fields[0] as String,
       ayats: (fields[1] as List).cast<String>(),
     );
@@ -25,11 +26,13 @@ class WerdAdapter extends TypeAdapter<Werd> {
   @override
   void write(BinaryWriter writer, Werd obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(3)
       ..writeByte(0)
       ..write(obj.werdFromTo)
       ..writeByte(1)
-      ..write(obj.ayats);
+      ..write(obj.ayats)
+      ..writeByte(2)
+      ..write(obj.mp3File);
   }
 
   @override

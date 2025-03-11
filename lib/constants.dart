@@ -8,6 +8,7 @@ final List<Surah> surahs = [
     surahName: 'الاحقاف',
     werd: [
       Werd(
+   mp3File: 'audio/sample-9s.mp3',
         werdFromTo: '1-4',
         ayats: [
           "بسم الله الرحمن الرحيم",

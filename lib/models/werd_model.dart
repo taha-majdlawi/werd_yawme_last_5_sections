@@ -1,8 +1,8 @@
 import 'package:hive/hive.dart';
 
-part 'werd_model.g.dart'; // تأكد من إضافة هذا السطر
+part 'werd_model.g.dart';
 
-@HiveType(typeId: 1) // ✅ Type ID مختلف عن Surah
+@HiveType(typeId: 1)
 class Werd extends HiveObject {
   @HiveField(0)
   final String werdFromTo;
@@ -10,8 +10,8 @@ class Werd extends HiveObject {
   @HiveField(1)
   final List<String> ayats;
 
-  Werd({
-    required this.werdFromTo,
-    required this.ayats,
-  });
+  @HiveField(2)
+   String? mp3File;
+
+  Werd({this.mp3File, required this.werdFromTo, required this.ayats});
 }

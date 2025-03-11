@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lastfivesectionsofquran/models/surah_model.dart';
 import 'package:lastfivesectionsofquran/models/werd_model.dart';
 import 'package:lastfivesectionsofquran/widgets/custom_show_ayates_list_view.dart';
+import 'package:lastfivesectionsofquran/widgets/custom_tabBar_aoudio_player.dart';
 
 class ShowWerdScreen extends StatelessWidget {
   const ShowWerdScreen({super.key, required this.werd, required this.surah});
@@ -26,6 +27,10 @@ class ShowWerdScreen extends StatelessWidget {
             child: CustomShowAyatesListView(werd: werd),
           ),
         ],
+      ),
+      bottomNavigationBar: CustomBottombarSound(
+        ayatIndex: 2,
+        mp3File: werd.mp3File,
       ),
     );
   }
