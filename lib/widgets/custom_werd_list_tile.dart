@@ -40,8 +40,9 @@ class _CustomWerdListTileState extends State<CustomWerdListTile> {
           MaterialPageRoute(
             builder: (context) {
               return ShowWerdScreen(
+                surah:  widget.surah,
                 werd: widget.surah.werd[widget.index],
-                surahName: widget.surah.surahName,
+            
               );
             },
           ),
