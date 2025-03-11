@@ -19,17 +19,19 @@ class WerdToStoreAdapter extends TypeAdapter<WerdToStore> {
     return WerdToStore(
       surah: fields[0] as Surah,
       index: fields[1] as int,
-    );
+    )..objIndex = fields[2] as String?;
   }
 
   @override
   void write(BinaryWriter writer, WerdToStore obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(3)
       ..writeByte(0)
       ..write(obj.surah)
       ..writeByte(1)
-      ..write(obj.index);
+      ..write(obj.index)
+      ..writeByte(2)
+      ..write(obj.objIndex);
   }
 
   @override

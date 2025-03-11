@@ -23,7 +23,9 @@ class HomePage extends StatelessWidget {
       backgroundColor:
           isDarkMode ? Colors.black : Color.fromARGB(255, 227, 226, 234),
       appBar: AppBar(
-        actions: [CustomFavButton()],
+        actions: [CustomFavButton(
+          isDarkMode: isDarkMode,
+        )],
         backgroundColor:
             isDarkMode ? Colors.black : Color.fromARGB(255, 227, 226, 234),
 
@@ -43,7 +45,7 @@ class HomePage extends StatelessWidget {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (context, index) {
-                return CustomSurahListTile(surah: surahs[index]);
+                return CustomSurahListTile(surah: surahs[index],isDarkmode: isDarkMode,);
               },
               childCount: surahs.length, // Replace with your actual list length
             ),

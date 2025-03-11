@@ -3,6 +3,7 @@ import 'package:lastfivesectionsofquran/constants.dart';
 import 'package:lastfivesectionsofquran/helper/font_size_provider.dart';
 import 'package:lastfivesectionsofquran/models/model_to_store_werd.dart';
 import 'package:lastfivesectionsofquran/models/surah_model.dart';
+import 'package:lastfivesectionsofquran/models/werd_model.dart';
 
 import 'package:lastfivesectionsofquran/screens/home_page.dart' show HomePage;
 import 'package:provider/provider.dart';
@@ -12,7 +13,8 @@ void main() async {
   await Hive.initFlutter(); 
 
 Hive.registerAdapter(WerdToStoreAdapter()); 
-
+  Hive.registerAdapter(SurahAdapter());
+  Hive.registerAdapter(WerdAdapter());
 await Hive.openBox<WerdToStore>(kBoxName);
 
   WidgetsFlutterBinding.ensureInitialized();

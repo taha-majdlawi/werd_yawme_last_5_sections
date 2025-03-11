@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lastfivesectionsofquran/screens/fav_screen.dart';
 
 class CustomFavButton extends StatelessWidget {
-  const CustomFavButton({super.key});
-
+  const CustomFavButton({super.key, required this.isDarkMode});
+  final bool isDarkMode;
   @override
   Widget build(BuildContext context) {
     return IconButton(
@@ -12,7 +12,7 @@ class CustomFavButton extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return FavScreen();
+              return FavScreen(isDarkMode: isDarkMode);
             },
           ),
         );

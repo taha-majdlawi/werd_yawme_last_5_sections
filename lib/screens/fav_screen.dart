@@ -7,8 +7,8 @@ import 'package:lastfivesectionsofquran/models/surah_model.dart';
 import 'package:lastfivesectionsofquran/widgets/custom_werd_list_tile.dart';
 
 class FavScreen extends StatefulWidget {
-  const FavScreen({super.key});
-
+  const FavScreen({super.key, required this.isDarkMode});
+  final bool isDarkMode;
   @override
   State<FavScreen> createState() => _FavScreenState();
 }
@@ -35,12 +35,19 @@ class _FavScreenState extends State<FavScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(' المفضلة', style: TextStyle(fontFamily: 'Amiri')),
+        backgroundColor:
+            widget.isDarkMode ? null : Color.fromARGB(255, 227, 226, 234),
+      ),
       body: ListView.builder(
         itemCount: favWerd.length,
         itemBuilder:
             (context, index) => CustomWerdListTile(
               surah: favWerd[index].surah,
               index: favWerd[index].index,
+              isFavScreen: true,
             ),
       ),
     );

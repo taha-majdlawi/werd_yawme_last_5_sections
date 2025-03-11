@@ -3,8 +3,9 @@ import 'package:lastfivesectionsofquran/models/surah_model.dart';
 import 'package:lastfivesectionsofquran/screens/show_all_werds_for_surah.dart';
 
 class CustomSurahListTile extends StatelessWidget {
-  const CustomSurahListTile({super.key, required this.surah});
+  const CustomSurahListTile({super.key, required this.surah, required this.isDarkmode});
   final Surah surah;
+  final bool isDarkmode;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -13,7 +14,7 @@ class CustomSurahListTile extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return ShowAllWerdsForSurah(surah: surah);
+              return ShowAllWerdsForSurah(surah: surah,isDarkMode: isDarkmode,);
             },
           ),
         );
@@ -25,7 +26,7 @@ class CustomSurahListTile extends StatelessWidget {
           leading: Text(
             textAlign: TextAlign.right,
             surah.surahNumber.toString(),
-            style: TextStyle(fontSize: 20,fontFamily: 'Amiri'),
+            style: TextStyle(fontSize: 20, fontFamily: 'Amiri'),
           ),
           title: Text(
             textAlign: TextAlign.right,

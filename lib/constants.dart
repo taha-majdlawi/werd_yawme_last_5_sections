@@ -1,7 +1,7 @@
 import 'package:lastfivesectionsofquran/models/surah_model.dart';
+import 'package:lastfivesectionsofquran/models/werd_model.dart';
 
-
-final String kBoxName = 'werdsToStore';
+final String kBoxName = 'wwwwfdjhwgffhhnjkerdsToStore';
 final List<Surah> surahs = [
   Surah(
     surahNumber: 46,
