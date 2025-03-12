@@ -4130,7 +4130,6 @@ final List<Surah> surahs = [
           'audio/080/080040.mp3',
           'audio/080/080041.mp3',
           'audio/080/080042.mp3',
-
         ],
         werdFromTo: '33-42',
         ayats: [
@@ -4154,6 +4153,23 @@ final List<Surah> surahs = [
     surahNumber: 81,
     werd: [
       Werd(
+        mp3File: [
+          'audio/081/081000.mp3',
+          'audio/081/081001.mp3',
+          'audio/081/081002.mp3',
+          'audio/081/081003.mp3',
+          'audio/081/081004.mp3',
+          'audio/081/081005.mp3',
+          'audio/081/081006.mp3',
+          'audio/081/081007.mp3',
+          'audio/081/081008.mp3',
+          'audio/081/081009.mp3',
+          'audio/081/081010.mp3',
+          'audio/081/081011.mp3',
+          'audio/081/081012.mp3',
+          'audio/081/081013.mp3',
+          'audio/081/081014.mp3',
+        ],
         werdFromTo: '1-14',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4174,6 +4190,23 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/081/081015.mp3',
+          'audio/081/081016.mp3',
+          'audio/081/081017.mp3',
+          'audio/081/081018.mp3',
+          'audio/081/081019.mp3',
+          'audio/081/081020.mp3',
+          'audio/081/081021.mp3',
+          'audio/081/081022.mp3',
+          'audio/081/081023.mp3',
+          'audio/081/081024.mp3',
+          'audio/081/081025.mp3',
+          'audio/081/081026.mp3',
+          'audio/081/081027.mp3',
+          'audio/081/081028.mp3',
+          'audio/081/081029.mp3',
+        ],
         werdFromTo: '15-29',
         ayats: [
           "بسم الله الرحمن الرحيم",
