@@ -3778,7 +3778,6 @@ final List<Surah> surahs = [
           'audio/077/077048.mp3',
           'audio/077/077049.mp3',
           'audio/077/077050.mp3',
-
         ],
         werdFromTo: '29-50',
         ayats: [
@@ -3814,6 +3813,25 @@ final List<Surah> surahs = [
     surahNumber: 78,
     werd: [
       Werd(
+        mp3File: [
+          'audio/078/078000.mp3',
+          'audio/078/078001.mp3',
+          'audio/078/078002.mp3',
+          'audio/078/078003.mp3',
+          'audio/078/078004.mp3',
+          'audio/078/078005.mp3',
+          'audio/078/078006.mp3',
+          'audio/078/078007.mp3',
+          'audio/078/078008.mp3',
+          'audio/078/078009.mp3',
+          'audio/078/078010.mp3',
+          'audio/078/078011.mp3',
+          'audio/078/078012.mp3',
+          'audio/078/078013.mp3',
+          'audio/078/078014.mp3',
+          'audio/078/078015.mp3',
+          'audio/078/078016.mp3',
+        ],
         werdFromTo: '1-16',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -3836,6 +3854,22 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/078/078017.mp3',
+          'audio/078/078018.mp3',
+          'audio/078/078019.mp3',
+          'audio/078/078020.mp3',
+          'audio/078/078021.mp3',
+          'audio/078/078022.mp3',
+          'audio/078/078023.mp3',
+          'audio/078/078024.mp3',
+          'audio/078/078025.mp3',
+          'audio/078/078026.mp3',
+          'audio/078/078027.mp3',
+          'audio/078/078028.mp3',
+          'audio/078/078029.mp3',
+          'audio/078/078030.mp3',
+        ],
         werdFromTo: '17-30',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -3856,6 +3890,18 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/078/078031.mp3',
+          'audio/078/078032.mp3',
+          'audio/078/078033.mp3',
+          'audio/078/078034.mp3',
+          'audio/078/078035.mp3',
+          'audio/078/078036.mp3',
+          'audio/078/078037.mp3',
+          'audio/078/078038.mp3',
+          'audio/078/078039.mp3',
+          'audio/078/078040.mp3',
+        ],
         werdFromTo: '31-40',
         ayats: [
           "بسم الله الرحمن الرحيم",
