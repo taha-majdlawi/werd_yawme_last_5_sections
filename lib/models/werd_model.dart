@@ -11,7 +11,7 @@ class Werd extends HiveObject {
   final List<String> ayats;
 
   @HiveField(2)
-   String? mp3File;
+   List<String>? mp3File;
 
   Werd({this.mp3File, required this.werdFromTo, required this.ayats});
 }

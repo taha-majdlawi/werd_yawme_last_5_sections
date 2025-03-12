@@ -12,7 +12,7 @@ class CustomBottombarSound extends StatefulWidget {
     required this.ayatIndex,
   });
   final int ayatIndex;
-  final String? mp3File;
+  final List<String>? mp3File;
 
   @override
   State<CustomBottombarSound> createState() => _CustomBottombarSoundState();
@@ -57,13 +57,12 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
   Widget build(BuildContext context) {
     BlocProvider.of<AudioCubit>(context).isPlaying();
     return BottomAppBar(
-      height: 140,
+      height: 150,
       shape: CircularNotchedRectangle(),
       color: Color.fromARGB(255, 227, 226, 234),
       child: Container(
         width: 500,
         decoration: BoxDecoration(
-       
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
@@ -106,7 +105,6 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
                         AudioCubit.formatTime(
                           context.read<AudioCubit>().position,
                         ),
-                 
                       ),
                     ),
                     Padding(
@@ -115,7 +113,6 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
                         AudioCubit.formatTime(
                           context.read<AudioCubit>().duration,
                         ),
-                       
                       ),
                     ),
                   ],
@@ -128,14 +125,13 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
                         context.read<AudioCubit>().playing
                             ? Icons.pause
                             : Icons.play_arrow,
-                     
                       ),
                       onPressed: () async {
                         if (context.read<AudioCubit>().playing) {
                           await context.read<AudioCubit>().pauseAudio();
                         } else {
                           if (context.read<AudioCubit>().mp3File != null) {
-                            await context.read<AudioCubit>().playAudio(
+                            await context.read<AudioCubit>().playAllAyat(
                               context.read<AudioCubit>().mp3File!,
                             );
                           } else {
@@ -147,23 +143,23 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
                       },
                     ),
                     IconButton(
-                      icon: Icon(
-                        Icons.stop,
-                  
-                      ),
+                      icon: Icon(Icons.stop),
                       onPressed: context.read<AudioCubit>().stopAudio,
                     ),
                     context.read<AudioCubit>().mp3File != null
                         ? Switch(
-                          onChanged: (value) {
+                          onChanged: (value) async {
                             isSwitched = value;
                             setState(() {
                               isSwitched = value;
                             });
                             if (value) {
-                              context.read<AudioCubit>().playAudioForEver(
-                                context.read<AudioCubit>().mp3File!,
-                              );
+                              for (int i = 0; i < 500; i++) {
+                                //    debugPrint('$i');
+                                await context.read<AudioCubit>().playAllAyat(
+                                  context.read<AudioCubit>().mp3File!,
+                                );
+                              }
                             } else {
                               context.read<AudioCubit>().stopAudio();
                             }
@@ -175,11 +171,7 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
                     context.read<AudioCubit>().mp3File != null
                         ? Text(
                           'اعادة التشغيل',
-                          style: TextStyle(
-                       
-                            fontSize: 20,
-                            fontFamily: 'Amiri',
-                          ),
+                          style: TextStyle(fontSize: 20, fontFamily: 'Amiri'),
                         )
                         : SizedBox(),
                   ],

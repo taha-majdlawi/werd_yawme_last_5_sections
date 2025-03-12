@@ -17,7 +17,7 @@ class WerdAdapter extends TypeAdapter<Werd> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return Werd(
-      mp3File: fields[2] as String?,
+      mp3File: (fields[2] as List?)?.cast<String>(),
       werdFromTo: fields[0] as String,
       ayats: (fields[1] as List).cast<String>(),
     );

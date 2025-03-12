@@ -13,7 +13,7 @@ class AudioCubit extends Cubit<AudioState> {
   Duration duration = Duration.zero;
   Duration position = Duration.zero;
 
-  String? mp3File = '';
+  List<String>? mp3File = [];
 
   isPlaying() {
     emit(NotPlaying());
@@ -24,9 +24,9 @@ class AudioCubit extends Cubit<AudioState> {
     }
   }
 
-  Future<void> playAllAyat(List<Werd> werdList) async {
-    for (var werd in werdList) {
-      await playAudio(werd.werdFromTo); // Waits for this Ayah to finish
+  Future<void> playAllAyat(List<String> werdList) async {
+    for (var file in werdList) {
+      await playAudio(file); // Waits for this Ayah to finish
       emit(IsPlaying());
       await waitForCompletion(); // Ensures we wait for audio to complete
     }
@@ -54,14 +54,14 @@ class AudioCubit extends Cubit<AudioState> {
     return number.toString().padLeft(length, '0');
   }
 
- Future<void> playAudioForEver(String url) async {
-  emit(IsPlaying());
-  playing = true;
+//  Future<void> playAudioForEver(List<String> url) async {
+//   emit(IsPlaying());
+//   playing = true;
 
-  // Ensure it only loops while the switch is on
-  await audioPlayer.setReleaseMode(ReleaseMode.loop);
-  await audioPlayer.play(AssetSource(url));
-}
+//   // Ensure it only loops while the switch is on
+//   await audioPlayer.setReleaseMode(ReleaseMode.loop);
+//   await audioPlayer.play(AssetSource(url));
+// }
 
   Future<void> playAudio(String url) async {
     emit(IsPlaying());
