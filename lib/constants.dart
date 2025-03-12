@@ -2001,6 +2001,12 @@ final List<Surah> surahs = [
     surahNumber: 59,
     werd: [
       Werd(
+        mp3File: [
+          'audio/59/059001.mp3',
+          'audio/59/059002.mp3',
+          'audio/59/059003.mp3',
+          'audio/59/059004.mp3',
+        ],
         werdFromTo: '1-4',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2011,6 +2017,11 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/59/059005.mp3',
+          'audio/59/059006.mp3',
+          'audio/59/059007.mp3',
+        ],
         werdFromTo: '5-7',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2020,6 +2031,11 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/59/059008.mp3',
+          'audio/59/059009.mp3',
+          'audio/59/059010.mp3',
+        ],
         werdFromTo: '8-10',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2029,6 +2045,11 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/59/059011.mp3',
+          'audio/59/059012.mp3',
+          'audio/59/059013.mp3',
+        ],
         werdFromTo: '11-13',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2038,6 +2059,12 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/59/059014.mp3',
+          'audio/59/059015.mp3',
+          'audio/59/059016.mp3',
+          'audio/59/059017.mp3',
+        ],
         werdFromTo: '14-17',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2048,6 +2075,12 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/59/059018.mp3',
+          'audio/59/059019.mp3',
+          'audio/59/059020.mp3',
+          'audio/59/059021.mp3',
+        ],
         werdFromTo: '18-21',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2058,6 +2091,13 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/59/059021.mp3',
+          'audio/59/059022.mp3',
+          'audio/59/059023.mp3',
+          'audio/59/059024.mp3',
+        ],
+
         werdFromTo: '21-24',
         ayats: [
           "بسم الله الرحمن الرحيم",
