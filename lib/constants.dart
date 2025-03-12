@@ -3100,7 +3100,6 @@ final List<Surah> surahs = [
           'audio/071/071007.mp3',
           'audio/071/071008.mp3',
           'audio/071/071009.mp3',
-
         ],
         werdFromTo: '5-9',
         ayats: [
@@ -3125,7 +3124,6 @@ final List<Surah> surahs = [
           'audio/071/071018.mp3',
           'audio/071/071019.mp3',
           'audio/071/071020.mp3',
-
         ],
         werdFromTo: '10-20',
         ayats: [
@@ -3174,6 +3172,16 @@ final List<Surah> surahs = [
     surahNumber: 72,
     werd: [
       Werd(
+        mp3File: [
+          'audio/072/072000.mp3',
+          'audio/072/072001.mp3',
+          'audio/072/072002.mp3',
+          'audio/072/072003.mp3',
+          'audio/072/072004.mp3',
+          'audio/072/072005.mp3',
+          'audio/072/072006.mp3',
+          'audio/072/072007.mp3',
+        ],
         werdFromTo: '1-7',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -3187,6 +3195,14 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/072/072008.mp3',
+          'audio/072/072009.mp3',
+          'audio/072/072010.mp3',
+          'audio/072/072011.mp3',
+          'audio/072/072012.mp3',
+          'audio/072/072013.mp3',
+        ],
         werdFromTo: '8-13',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -3199,6 +3215,19 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/072/072014.mp3',
+          'audio/072/072015.mp3',
+          'audio/072/072016.mp3',
+          'audio/072/072017.mp3',
+          'audio/072/072018.mp3',
+          'audio/072/072019.mp3',
+          'audio/072/072020.mp3',
+          'audio/072/072021.mp3',
+          'audio/072/072022.mp3',
+          'audio/072/072023.mp3',
+          'audio/072/072024.mp3',
+        ],
         werdFromTo: '14-24',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -3216,6 +3245,12 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/072/072025.mp3',
+          'audio/072/072026.mp3',
+          'audio/072/072027.mp3',
+          'audio/072/072028.mp3',
+        ],
         werdFromTo: '25-28',
         ayats: [
           "بسم الله الرحمن الرحيم",
