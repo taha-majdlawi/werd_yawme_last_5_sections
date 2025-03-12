@@ -3263,10 +3263,26 @@ final List<Surah> surahs = [
     ],
   ),
   Surah(
-    surahName: "لمزمل",
+    surahName: "المزمل",
     surahNumber: 73,
     werd: [
       Werd(
+        mp3File: [
+          'audio/073/073001.mp3',
+          'audio/073/073002.mp3',
+          'audio/073/073003.mp3',
+          'audio/073/073004.mp3',
+          'audio/073/073005.mp3',
+          'audio/073/073006.mp3',
+          'audio/073/073007.mp3',
+          'audio/073/073008.mp3',
+          'audio/073/073009.mp3',
+          'audio/073/073010.mp3',
+          'audio/073/073011.mp3',
+          'audio/073/073012.mp3',
+          'audio/073/073013.mp3',
+          'audio/073/073014.mp3',
+        ],
         werdFromTo: '1-14',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -3287,6 +3303,13 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/073/073015.mp3',
+          'audio/073/073016.mp3',
+          'audio/073/073017.mp3',
+          'audio/073/073018.mp3',
+          'audio/073/073019.mp3',
+        ],
         werdFromTo: '15-19',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -3298,6 +3321,9 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/073/073020.mp3',
+        ],
         werdFromTo: '20',
         ayats: [
           "بسم الله الرحمن الرحيم",
