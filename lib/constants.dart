@@ -2548,6 +2548,14 @@ final List<Surah> surahs = [
     surahNumber: 67,
     werd: [
       Werd(
+        mp3File: [
+          'audio/067/067000.mp3',
+          'audio/067/067001.mp3',
+          'audio/067/067002.mp3',
+          'audio/067/067003.mp3',
+          'audio/067/067004.mp3',
+        ],
+
         werdFromTo: '1-4',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2558,6 +2566,16 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/067/067005.mp3',
+          'audio/067/067006.mp3',
+          'audio/067/067007.mp3',
+          'audio/067/067008.mp3',
+          'audio/067/067009.mp3',
+          'audio/067/067010.mp3',
+          'audio/067/067011.mp3',
+
+        ],
         werdFromTo: '5-11',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2571,6 +2589,15 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/067/067012.mp3',
+          'audio/067/067013.mp3',
+          'audio/067/067014.mp3',
+          'audio/067/067015.mp3',
+          'audio/067/067016.mp3',
+          'audio/067/067017.mp3',
+          'audio/067/067018.mp3',
+        ],
         werdFromTo: '12-18',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2584,6 +2611,12 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/067/067019.mp3',
+          'audio/067/067020.mp3',
+          'audio/067/067021.mp3',
+          'audio/067/067022.mp3',
+        ],
         werdFromTo: '19-22',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2594,6 +2627,16 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/067/067023.mp3',
+          'audio/067/067024.mp3',
+          'audio/067/067025.mp3',
+          'audio/067/067026.mp3',
+          'audio/067/067027.mp3',
+          'audio/067/067028.mp3',
+          'audio/067/067029.mp3',
+          'audio/067/067030.mp3',
+        ],
         werdFromTo: '23-30',
         ayats: [
           "بسم الله الرحمن الرحيم",
