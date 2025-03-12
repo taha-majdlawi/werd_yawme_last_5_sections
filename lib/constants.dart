@@ -513,6 +513,14 @@ final List<Surah> surahs = [
     surahNumber: 50,
     werd: [
       Werd(
+        mp3File: [
+          'audio/50/050000.mp3',
+          'audio/50/050001.mp3',
+          'audio/50/050002.mp3',
+          'audio/50/050003.mp3',
+          'audio/50/050004.mp3',
+          'audio/50/050005.mp3',
+        ],
         werdFromTo: '1-5',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -524,6 +532,18 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/50/050006.mp3',
+          'audio/50/050007.mp3',
+          'audio/50/050008.mp3',
+          'audio/50/050009.mp3',
+          'audio/50/050010.mp3',
+          'audio/50/050012.mp3',
+          'audio/50/050010.mp3',
+          'audio/50/050013.mp3',
+          'audio/50/050014.mp3',
+          'audio/50/050015.mp3',
+        ],
         werdFromTo: '6-15',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -540,6 +560,22 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/50/050016.mp3',
+          'audio/50/050017.mp3',
+          'audio/50/050018.mp3',
+          'audio/50/050019.mp3',
+          'audio/50/050020.mp3',
+          'audio/50/050021.mp3',
+          'audio/50/050022.mp3',
+          'audio/50/050023.mp3',
+          'audio/50/050024.mp3',
+          'audio/50/050025.mp3',
+          'audio/50/050026.mp3',
+          'audio/50/050027.mp3',
+          'audio/50/050028.mp3',
+          'audio/50/050029.mp3',
+        ],
         werdFromTo: '16-29',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -560,6 +596,15 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/50/050030.mp3',
+          'audio/50/050031.mp3',
+          'audio/50/050033.mp3',
+          'audio/50/050034.mp3',
+          'audio/50/050035.mp3',
+          'audio/50/050036.mp3',
+          'audio/50/050037.mp3',
+        ],
         werdFromTo: '30-37',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -574,6 +619,16 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/50/050038.mp3',
+          'audio/50/050039.mp3',
+          'audio/50/050040.mp3',
+          'audio/50/050041.mp3',
+          'audio/50/050042.mp3',
+          'audio/50/050043.mp3',
+          'audio/50/050044.mp3',
+          'audio/50/050045.mp3',
+        ],
         werdFromTo: '38-45',
         ayats: [
           "بسم الله الرحمن الرحيم",
