@@ -4234,6 +4234,17 @@ final List<Surah> surahs = [
     surahNumber: 82,
     werd: [
       Werd(
+        mp3File: [
+          'audio/082/082000.mp3',
+          'audio/082/082001.mp3',
+          'audio/082/082002.mp3',
+          'audio/082/082003.mp3',
+          'audio/082/082004.mp3',
+          'audio/082/082005.mp3',
+          'audio/082/082006.mp3',
+          'audio/082/082007.mp3',
+          'audio/082/082008.mp3',
+        ],
         werdFromTo: '1-8',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4248,6 +4259,19 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/082/082009.mp3',
+          'audio/082/082010.mp3',
+          'audio/082/082011.mp3',
+          'audio/082/082012.mp3',
+          'audio/082/082013.mp3',
+          'audio/082/082014.mp3',
+          'audio/082/082015.mp3',
+          'audio/082/082016.mp3',
+          'audio/082/082017.mp3',
+          'audio/082/082018.mp3',
+          'audio/082/082019.mp3',
+        ],
         werdFromTo: '9-19',
         ayats: [
           "بسم الله الرحمن الرحيم",
