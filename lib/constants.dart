@@ -2491,6 +2491,14 @@ final List<Surah> surahs = [
     surahNumber: 66,
     werd: [
       Werd(
+        mp3File: [
+          'audio/066/066000.mp3',
+          'audio/066/066001.mp3',
+          'audio/066/066002.mp3',
+          'audio/066/066003.mp3',
+          'audio/066/066004.mp3',
+          'audio/066/066005.mp3',
+        ],
         werdFromTo: '1-5',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2502,6 +2510,7 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: ['audio/066/066006.mp3', 'audio/066/066007.mp3'],
         werdFromTo: '6-7',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2510,6 +2519,7 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: ['audio/066/066008.mp3', 'audio/066/066009.mp3'],
         werdFromTo: '8-9',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2518,6 +2528,11 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/066/066010.mp3',
+          'audio/066/066011.mp3',
+          'audio/066/066012.mp3',
+        ],
         werdFromTo: '10-12',
         ayats: [
           "بسم الله الرحمن الرحيم",
