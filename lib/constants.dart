@@ -2297,6 +2297,12 @@ final List<Surah> surahs = [
     surahNumber: 63,
     werd: [
       Werd(
+        mp3File: [
+          'audio/63/063000.mp3',
+          'audio/63/063001.mp3',
+          'audio/63/063002.mp3',
+          'audio/63/063003.mp3',
+        ],
         werdFromTo: '1-3',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2306,6 +2312,13 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/63/063004.mp3',
+          'audio/63/063005.mp3',
+          'audio/63/063006.mp3',
+          'audio/63/063007.mp3',
+          'audio/63/063008.mp3',
+        ],
         werdFromTo: '4-8',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -2317,6 +2330,11 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/63/063009.mp3',
+          'audio/63/063010.mp3',
+          'audio/63/063011.mp3',
+        ],
         werdFromTo: '9-11',
         ayats: [
           "بسم الله الرحمن الرحيم",
