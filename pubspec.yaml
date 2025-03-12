@@ -97,6 +97,11 @@ flutter:
     - assets/audio/073/
     - assets/audio/074/
     - assets/audio/075/
+    - assets/audio/076/
+    - assets/audio/077/
+    - assets/audio/078/
+    - assets/audio/079/
+    - assets/audio/080/
     - assets/audio/sample-9s.mp3
 
   # An image asset can refer to one or more resolution-specific "variants", see
