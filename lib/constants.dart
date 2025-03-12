@@ -3021,7 +3021,6 @@ final List<Surah> surahs = [
           'audio/070/070033.mp3',
           'audio/070/070034.mp3',
           'audio/070/070035.mp3',
-
         ],
         werdFromTo: '19-35',
         ayats: [
@@ -3078,6 +3077,13 @@ final List<Surah> surahs = [
     surahNumber: 71,
     werd: [
       Werd(
+        mp3File: [
+          'audio/071/071000.mp3',
+          'audio/071/071001.mp3',
+          'audio/071/071002.mp3',
+          'audio/071/071003.mp3',
+          'audio/071/071004.mp3',
+        ],
         werdFromTo: '1-4',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -3088,6 +3094,14 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/071/071005.mp3',
+          'audio/071/071006.mp3',
+          'audio/071/071007.mp3',
+          'audio/071/071008.mp3',
+          'audio/071/071009.mp3',
+
+        ],
         werdFromTo: '5-9',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -3099,6 +3113,20 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/071/071010.mp3',
+          'audio/071/071011.mp3',
+          'audio/071/071012.mp3',
+          'audio/071/071013.mp3',
+          'audio/071/071014.mp3',
+          'audio/071/071015.mp3',
+          'audio/071/071016.mp3',
+          'audio/071/071017.mp3',
+          'audio/071/071018.mp3',
+          'audio/071/071019.mp3',
+          'audio/071/071020.mp3',
+
+        ],
         werdFromTo: '10-20',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -3116,6 +3144,16 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/071/071021.mp3',
+          'audio/071/071022.mp3',
+          'audio/071/071023.mp3',
+          'audio/071/071024.mp3',
+          'audio/071/071025.mp3',
+          'audio/071/071026.mp3',
+          'audio/071/071027.mp3',
+          'audio/071/071028.mp3',
+        ],
         werdFromTo: '21-28',
         ayats: [
           "بسم الله الرحمن الرحيم",
