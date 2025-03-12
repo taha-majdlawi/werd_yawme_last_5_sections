@@ -34,13 +34,13 @@ class _ShowWerdScreenState extends State<ShowWerdScreen> {
   @override
   void dispose() {
     if (_audioCubit != null) {
-      _audioCubit!.audioPlayer.stop(); 
+      _audioCubit!.audioPlayer.stop();
       _audioCubit!.duration = Duration.zero; // ضبط القيم بأمان
       _audioCubit!.position = Duration.zero;
+      _audioCubit!.playing = false;
     }
     super.dispose();
   }
-
 
   @override
   Widget build(BuildContext context) {
