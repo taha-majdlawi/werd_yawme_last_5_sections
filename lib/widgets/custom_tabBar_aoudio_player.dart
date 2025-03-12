@@ -20,8 +20,10 @@ class CustomBottombarSound extends StatefulWidget {
 
 class _CustomBottombarSoundState extends State<CustomBottombarSound> {
   bool isSwitched = false;
+  late AudioCubit audioCubit;
   void initState() {
     super.initState();
+     audioCubit = context.read<AudioCubit>();
     context.read<AudioCubit>().mp3File = widget.mp3File;
     // Listening for player state changes
     context.read<AudioCubit>().audioPlayer.onPlayerStateChanged.listen((
@@ -52,7 +54,10 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
       }
     });
   }
-
+@override
+void dispose() {
+  super.dispose();
+}
   @override
   Widget build(BuildContext context) {
     BlocProvider.of<AudioCubit>(context).isPlaying();
@@ -157,9 +162,7 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
                             if (value) {
                               for (int i = 0; i < 500; i++) {
                                 //    debugPrint('$i');
-                                await context.read<AudioCubit>().playAllAyat(
-                                  context.read<AudioCubit>().mp3File!,
-                                );
+                              await audioCubit.playAllAyat(audioCubit.mp3File!);
                               }
                             } else {
                               context.read<AudioCubit>().stopAudio();
