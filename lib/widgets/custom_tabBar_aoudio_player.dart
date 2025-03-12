@@ -9,11 +9,11 @@ class CustomBottombarSound extends StatefulWidget {
   const CustomBottombarSound({
     super.key,
     required this.mp3File,
-    required this.ayatIndex,
+    required this.ayatIndex, required this.isDarkMode,
   });
   final int ayatIndex;
   final List<String>? mp3File;
-
+  final bool isDarkMode;
   @override
   State<CustomBottombarSound> createState() => _CustomBottombarSoundState();
 }
@@ -59,7 +59,7 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
     return BottomAppBar(
       height: 150,
       shape: CircularNotchedRectangle(),
-      color: Color.fromARGB(255, 227, 226, 234),
+      color: widget.isDarkMode? Colors.black : Color.fromARGB(255, 227, 226, 234),
       child: Container(
         width: 500,
         decoration: BoxDecoration(
@@ -149,6 +149,7 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
                     context.read<AudioCubit>().mp3File != null
                         ? Switch(
                           onChanged: (value) async {
+                            //   context.read<AudioCubit>().audioPlayer = AudioPlayer();
                             isSwitched = value;
                             setState(() {
                               isSwitched = value;

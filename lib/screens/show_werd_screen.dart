@@ -5,16 +5,17 @@ import 'package:lastfivesectionsofquran/widgets/custom_show_ayates_list_view.dar
 import 'package:lastfivesectionsofquran/widgets/custom_tabBar_aoudio_player.dart';
 
 class ShowWerdScreen extends StatelessWidget {
-  const ShowWerdScreen({super.key, required this.werd, required this.surah});
+  const ShowWerdScreen({super.key, required this.werd, required this.surah, required this.isDarkMode});
   final Werd werd;
 
   final Surah surah;
+  final bool isDarkMode;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 227, 226, 234),
+      backgroundColor:isDarkMode? Colors.black : Color.fromARGB(255, 227, 226, 234),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 227, 226, 234),
+      backgroundColor:isDarkMode? Colors.black : Color.fromARGB(255, 227, 226, 234),
         title: Text(
           textAlign: TextAlign.right,
           werd.werdFromTo + '          ' + surah.surahName,
@@ -22,13 +23,10 @@ class ShowWerdScreen extends StatelessWidget {
         ),
       ),
       body: Column(
-        children: [
-          Expanded(
-            child: CustomShowAyatesListView(werd: werd),
-          ),
-        ],
+        children: [Expanded(child: CustomShowAyatesListView(werd: werd))],
       ),
       bottomNavigationBar: CustomBottombarSound(
+        isDarkMode: isDarkMode,
         ayatIndex: 2,
         mp3File: werd.mp3File,
       ),

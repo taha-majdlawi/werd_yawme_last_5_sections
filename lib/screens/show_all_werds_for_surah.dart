@@ -29,6 +29,7 @@ class ShowAllWerdsForSurah extends StatelessWidget {
         itemCount: surah.werd.length,
         itemBuilder: (context, index) {
           return CustomWerdListTile(
+            isDarkMode: isDarkMode,
             surah: surah,
             index: index,
             isFavScreen: false,

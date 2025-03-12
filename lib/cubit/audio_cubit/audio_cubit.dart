@@ -8,7 +8,7 @@ import 'package:lastfivesectionsofquran/models/werd_model.dart';
 
 class AudioCubit extends Cubit<AudioState> {
   AudioCubit(super.initialState);
-  final AudioPlayer audioPlayer = AudioPlayer();
+   AudioPlayer audioPlayer = AudioPlayer();
   bool playing = false;
   Duration duration = Duration.zero;
   Duration position = Duration.zero;

@@ -11,13 +11,13 @@ class CustomWerdListTile extends StatefulWidget {
     super.key,
     required this.surah,
     required this.index,
-    required this.isFavScreen,
+    required this.isFavScreen, required this.isDarkMode,
   });
 
   final Surah surah;
   final int index;
   final bool isFavScreen;
-
+  final bool isDarkMode;
   @override
   State<CustomWerdListTile> createState() => _CustomWerdListTileState();
 }
@@ -40,9 +40,9 @@ class _CustomWerdListTileState extends State<CustomWerdListTile> {
           MaterialPageRoute(
             builder: (context) {
               return ShowWerdScreen(
-                surah:  widget.surah,
+                isDarkMode: widget.isDarkMode,
+                surah: widget.surah,
                 werd: widget.surah.werd[widget.index],
-            
               );
             },
           ),
@@ -69,10 +69,7 @@ class _CustomWerdListTileState extends State<CustomWerdListTile> {
                   setState(() {});
                 } else {
                   var AyatBox = Hive.box<WerdToStore>(kBoxName);
-                  AyatBox.put(
-                    werdToStore.objIndex,
-                    werdToStore,
-                  ); 
+                  AyatBox.put(werdToStore.objIndex, werdToStore);
                   setState(() {});
                 }
               },

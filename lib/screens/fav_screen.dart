@@ -45,6 +45,7 @@ class _FavScreenState extends State<FavScreen> {
         itemCount: favWerd.length,
         itemBuilder:
             (context, index) => CustomWerdListTile(
+              isDarkMode: widget.isDarkMode,
               surah: favWerd[index].surah,
               index: favWerd[index].index,
               isFavScreen: true,
