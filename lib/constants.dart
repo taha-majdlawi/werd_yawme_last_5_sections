@@ -4579,6 +4579,9 @@ final List<Surah> surahs = [
     surahNumber: 87,
     werd: [
       Werd(
+        mp3File: [
+          'audio/087.mp3',
+        ],
         werdFromTo: '1-19',
         ayats: [
           "بسم الله الرحمن الرحيم",
