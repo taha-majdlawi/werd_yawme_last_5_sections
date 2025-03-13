@@ -4730,6 +4730,7 @@ final List<Surah> surahs = [
     surahNumber: 90,
     werd: [
       Werd(
+        mp3File: ['audio/90.mp3'],
         werdFromTo: '1-20',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4743,6 +4744,7 @@ final List<Surah> surahs = [
     surahNumber: 91,
     werd: [
       Werd(
+        mp3File: ['audio/91.mp3'],
         werdFromTo: '1-15',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4756,6 +4758,7 @@ final List<Surah> surahs = [
     surahNumber: 92,
     werd: [
       Werd(
+        mp3File: ['audio/92.mp3'],
         werdFromTo: '1-21',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4768,7 +4771,9 @@ final List<Surah> surahs = [
     surahName: "الضحى",
     surahNumber: 93,
     werd: [
-      Werd(
+      Werd(   mp3File: [
+          'audio/93.mp3'
+        ],
         werdFromTo: '1-11',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4781,7 +4786,9 @@ final List<Surah> surahs = [
     surahName: "الشرح",
     surahNumber: 94,
     werd: [
-      Werd(
+      Werd(   mp3File: [
+          'audio/94.mp3'
+        ],
         werdFromTo: '1-18',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4794,7 +4801,9 @@ final List<Surah> surahs = [
     surahName: "التين",
     surahNumber: 95,
     werd: [
-      Werd(
+      Werd(   mp3File: [
+          'audio/95.mp3'
+        ],
         werdFromTo: '1-8',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4807,7 +4816,9 @@ final List<Surah> surahs = [
     surahName: "العلق",
     surahNumber: 96,
     werd: [
-      Werd(
+      Werd(   mp3File: [
+          'audio/96.mp3'
+        ],
         werdFromTo: '1-19',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4820,7 +4831,9 @@ final List<Surah> surahs = [
     surahName: "القدر",
     surahNumber: 97,
     werd: [
-      Werd(
+      Werd(   mp3File: [
+          'audio/97.mp3'
+        ],
         werdFromTo: '1-5',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4833,7 +4846,9 @@ final List<Surah> surahs = [
     surahName: "البينة",
     surahNumber: 98,
     werd: [
-      Werd(
+      Werd(   mp3File: [
+          'audio/98.mp3'
+        ],
         werdFromTo: '1-8',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4846,7 +4861,9 @@ final List<Surah> surahs = [
     surahName: "الزلزلة",
     surahNumber: 99,
     werd: [
-      Werd(
+      Werd(   mp3File: [
+          'audio/99.mp3'
+        ],
         werdFromTo: '1-8',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4859,7 +4876,9 @@ final List<Surah> surahs = [
     surahName: "العاديات",
     surahNumber: 100,
     werd: [
-      Werd(
+      Werd(   mp3File: [
+          'audio/100.mp3'
+        ],
         werdFromTo: '1-11',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4872,7 +4891,9 @@ final List<Surah> surahs = [
     surahName: "القارعة",
     surahNumber: 101,
     werd: [
-      Werd(
+      Werd( mp3File: [
+          'audio/101.mp3'
+        ],
         werdFromTo: '1-11',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4885,7 +4906,9 @@ final List<Surah> surahs = [
     surahName: "التكاثر",
     surahNumber: 102,
     werd: [
-      Werd(
+      Werd( mp3File: [
+          'audio/102.mp3'
+        ],
         werdFromTo: '1-8',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4898,7 +4921,9 @@ final List<Surah> surahs = [
     surahName: "العصر",
     surahNumber: 103,
     werd: [
-      Werd(
+      Werd( mp3File: [
+          'audio/103.mp3'
+        ],
         werdFromTo: '1-3',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4911,7 +4936,9 @@ final List<Surah> surahs = [
     surahName: "الهمزة",
     surahNumber: 104,
     werd: [
-      Werd(
+      Werd( mp3File: [
+          'audio/104.mp3'
+        ],
         werdFromTo: '1-9',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4924,7 +4951,9 @@ final List<Surah> surahs = [
     surahName: "الفيل",
     surahNumber: 105,
     werd: [
-      Werd(
+      Werd( mp3File: [
+          'audio/105.mp3'
+        ],
         werdFromTo: '1-5',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4937,7 +4966,9 @@ final List<Surah> surahs = [
     surahName: "قريش",
     surahNumber: 106,
     werd: [
-      Werd(
+      Werd( mp3File: [
+          'audio/106.mp3'
+        ],
         werdFromTo: '1-4',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4950,7 +4981,9 @@ final List<Surah> surahs = [
     surahName: "الماعون",
     surahNumber: 107,
     werd: [
-      Werd(
+      Werd( mp3File: [
+          'audio/107.mp3'
+        ],
         werdFromTo: '1-7',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4963,7 +4996,9 @@ final List<Surah> surahs = [
     surahName: "الكوثر",
     surahNumber: 108,
     werd: [
-      Werd(
+      Werd( mp3File: [
+          'audio/108.mp3'
+        ],
         werdFromTo: '1-3',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4976,7 +5011,9 @@ final List<Surah> surahs = [
     surahName: "الكافرون",
     surahNumber: 109,
     werd: [
-      Werd(
+      Werd( mp3File: [
+          'audio/109.mp3'
+        ],
         werdFromTo: '1-6',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4989,7 +5026,9 @@ final List<Surah> surahs = [
     surahName: "النصر",
     surahNumber: 110,
     werd: [
-      Werd(
+      Werd( mp3File: [
+          'audio/110.mp3'
+        ],
         werdFromTo: '1-3',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -5002,7 +5041,9 @@ final List<Surah> surahs = [
     surahName: "المسد",
     surahNumber: 111,
     werd: [
-      Werd(
+      Werd( mp3File: [
+          'audio/111.mp3'
+        ],
         werdFromTo: '1-5',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -5015,7 +5056,9 @@ final List<Surah> surahs = [
     surahName: "الاخلاص",
     surahNumber: 112,
     werd: [
-      Werd(
+      Werd( mp3File: [
+          'audio/112.mp3'
+        ],
         werdFromTo: '1-4',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -5028,7 +5071,9 @@ final List<Surah> surahs = [
     surahName: "الفلق",
     surahNumber: 113,
     werd: [
-      Werd(
+      Werd( mp3File: [
+          'audio/113.mp3'
+        ],
         werdFromTo: '1-5',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -5041,7 +5086,9 @@ final List<Surah> surahs = [
     surahName: "الناس",
     surahNumber: 114,
     werd: [
-      Werd(
+      Werd( mp3File: [
+          'audio/114.mp3'
+        ],
         werdFromTo: '1-6',
         ayats: [
           "بسم الله الرحمن الرحيم",
