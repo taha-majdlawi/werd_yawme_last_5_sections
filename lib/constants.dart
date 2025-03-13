@@ -4506,7 +4506,6 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
-
         mp3File: [
           'audio/085/085010.mp3',
           'audio/085/085011.mp3',
@@ -4547,9 +4546,7 @@ final List<Surah> surahs = [
     surahNumber: 86,
     werd: [
       Werd(
-        mp3File: [
-          'audio/086.mp3',
-        ],
+        mp3File: ['audio/086.mp3'],
         werdFromTo: '1-17',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4579,9 +4576,7 @@ final List<Surah> surahs = [
     surahNumber: 87,
     werd: [
       Werd(
-        mp3File: [
-          'audio/087.mp3',
-        ],
+        mp3File: ['audio/087.mp3'],
         werdFromTo: '1-19',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4613,9 +4608,7 @@ final List<Surah> surahs = [
     surahNumber: 88,
     werd: [
       Werd(
-        mp3File: [
-          'audio/088.mp3',
-        ],
+        mp3File: ['audio/088.mp3'],
         werdFromTo: '1-26',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4654,6 +4647,25 @@ final List<Surah> surahs = [
     surahNumber: 89,
     werd: [
       Werd(
+        mp3File: [
+          'audio/089/089000.mp3',
+          'audio/089/089001.mp3',
+          'audio/089/089002.mp3',
+          'audio/089/089003.mp3',
+          'audio/089/089004.mp3',
+          'audio/089/089005.mp3',
+          'audio/089/089006.mp3',
+          'audio/089/089007.mp3',
+          'audio/089/089008.mp3',
+          'audio/089/089009.mp3',
+          'audio/089/089010.mp3',
+          'audio/089/089011.mp3',
+          'audio/089/089012.mp3',
+          'audio/089/089013.mp3',
+          'audio/089/089014.mp3',
+          'audio/089/089015.mp3',
+          'audio/089/089016.mp3',
+        ],
         werdFromTo: '1-16',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4676,6 +4688,22 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
+        mp3File: [
+          'audio/089/089017.mp3',
+          'audio/089/089018.mp3',
+          'audio/089/089019.mp3',
+          'audio/089/089020.mp3',
+          'audio/089/089021.mp3',
+          'audio/089/089022.mp3',
+          'audio/089/089023.mp3',
+          'audio/089/089024.mp3',
+          'audio/089/089025.mp3',
+          'audio/089/089026.mp3',
+          'audio/089/089027.mp3',
+          'audio/089/089028.mp3',
+          'audio/089/089029.mp3',
+          'audio/089/089030.mp3',
+        ],
         werdFromTo: '17-30',
         ayats: [
           "بسم الله الرحمن الرحيم",
