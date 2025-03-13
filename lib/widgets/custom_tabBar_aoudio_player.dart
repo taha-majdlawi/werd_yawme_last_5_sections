@@ -139,11 +139,7 @@ void dispose() {
                             await context.read<AudioCubit>().playAllAyat(
                               context.read<AudioCubit>().mp3File!,
                             );
-                          } else {
-                            await context.read<AudioCubit>().playAllAyat([]);
-                            await context.read<AudioCubit>().playAllAyat([]);
-                            await context.read<AudioCubit>().playAllAyat([]);
-                          }
+                          } 
                         }
                       },
                     ),
