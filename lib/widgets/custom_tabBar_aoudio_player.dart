@@ -9,7 +9,8 @@ class CustomBottombarSound extends StatefulWidget {
   const CustomBottombarSound({
     super.key,
     required this.mp3File,
-    required this.ayatIndex, required this.isDarkMode,
+    required this.ayatIndex,
+    required this.isDarkMode,
   });
   final int ayatIndex;
   final List<String>? mp3File;
@@ -23,7 +24,7 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
   late AudioCubit audioCubit;
   void initState() {
     super.initState();
-     audioCubit = context.read<AudioCubit>();
+    audioCubit = context.read<AudioCubit>();
     context.read<AudioCubit>().mp3File = widget.mp3File;
     // Listening for player state changes
     context.read<AudioCubit>().audioPlayer.onPlayerStateChanged.listen((
@@ -54,17 +55,20 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
       }
     });
   }
-@override
-void dispose() {
-  super.dispose();
-}
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     BlocProvider.of<AudioCubit>(context).isPlaying();
     return BottomAppBar(
       height: 150,
       shape: CircularNotchedRectangle(),
-      color: widget.isDarkMode? Colors.black : Color.fromARGB(255, 227, 226, 234),
+      color:
+          widget.isDarkMode ? Colors.black : Color.fromARGB(255, 227, 226, 234),
       child: Container(
         width: 500,
         decoration: BoxDecoration(
@@ -139,7 +143,7 @@ void dispose() {
                             await context.read<AudioCubit>().playAllAyat(
                               context.read<AudioCubit>().mp3File!,
                             );
-                          } 
+                          }
                         }
                       },
                     ),
@@ -150,21 +154,32 @@ void dispose() {
                     context.read<AudioCubit>().mp3File != null
                         ? Switch(
                           onChanged: (value) async {
-                            //   context.read<AudioCubit>().audioPlayer = AudioPlayer();
-                            isSwitched = value;
                             setState(() {
                               isSwitched = value;
                             });
-                            if (value) {
-                              for (int i = 0; i < 500; i++) {
-                                //    debugPrint('$i');
-                              await audioCubit.playAllAyat(audioCubit.mp3File!);
-                              }
-                            } else {
+
+                            if (!value) {
                               context.read<AudioCubit>().stopAudio();
+                              return;
                             }
-                            if (!value) {}
+
+                            for (int i = 0; i < 500; i++) {
+                              if (!isSwitched) {
+                                context.read<AudioCubit>().stopAudio();
+                                break;
+                              }
+
+                              debugPrint('$i');
+                              await audioCubit.playAllAyat(
+                                context.read<AudioCubit>().mp3File!,
+                              );
+
+                              await Future.delayed(
+                                Duration(milliseconds: 500),
+                              );
+                            }
                           },
+
                           value: isSwitched,
                         )
                         : SizedBox(),
