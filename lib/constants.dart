@@ -479,11 +479,7 @@ final List<Surah> surahs = [
         ],
       ),
       Werd(
-        mp3File: [
-          'audio/4/049012.mp3',
-          'audio/4/049013.mp3',
-       
-        ],
+        mp3File: ['audio/4/049012.mp3', 'audio/4/049013.mp3'],
         werdFromTo: '12-13',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -602,6 +598,7 @@ final List<Surah> surahs = [
         mp3File: [
           'audio/50/050030.mp3',
           'audio/50/050031.mp3',
+          'audio/50/050032.mp3',
           'audio/50/050033.mp3',
           'audio/50/050034.mp3',
           'audio/50/050035.mp3',
