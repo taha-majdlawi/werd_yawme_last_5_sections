@@ -380,6 +380,8 @@ final List<Surah> surahs = [
           'audio/3/048019.mp3',
           'audio/3/048020.mp3',
           'audio/3/048021.mp3',
+          'audio/3/048022.mp3',
+          'audio/3/048023.mp3',
         ],
         werdFromTo: '18-23',
         ayats: [
