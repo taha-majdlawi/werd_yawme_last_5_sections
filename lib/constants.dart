@@ -482,7 +482,7 @@ final List<Surah> surahs = [
         mp3File: [
           'audio/4/049012.mp3',
           'audio/4/049013.mp3',
-          'audio/4/049014.mp3',
+       
         ],
         werdFromTo: '12-13',
         ayats: [
@@ -541,8 +541,8 @@ final List<Surah> surahs = [
           'audio/50/050008.mp3',
           'audio/50/050009.mp3',
           'audio/50/050010.mp3',
+          'audio/50/050011.mp3',
           'audio/50/050012.mp3',
-          'audio/50/050010.mp3',
           'audio/50/050013.mp3',
           'audio/50/050014.mp3',
           'audio/50/050015.mp3',
