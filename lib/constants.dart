@@ -2,7 +2,7 @@ import 'package:lastfivesectionsofquran/models/surah_model.dart';
 import 'package:lastfivesectionsofquran/models/werd_model.dart';
 
 //add Strings according werdFromTo
-final String kBoxName = 'wwwwfdjhwgffhhnjkerdsToStore';
+final String kBoxName = 'wwwwfdjhwgfffhhnjkerdsToStore';
 final List<Surah> surahs = [
   Surah(
     surahNumber: 46,
@@ -85,7 +85,7 @@ final List<Surah> surahs = [
           "وَالَّذِي قَالَ لِوَالِدَيْهِ أُفٍّ لَكُمَا أَتَعِدَانِنِي أَنْ أُخْرَجَ وَقَدْ خَلَتِ ٱلْقُرُونُ مِنْ قَبْلِي وَهُمَا يَسْتَغِيثَانِ ٱللَّهَ وَيَقُولَانِ ۚ وَيْلَكَ ءَامِنْ إِنَّ وَعْدَ ٱللَّهِ حَقٌّ ۖ فَقَالَ مَا هَٰذَآ إِلَّآ أَسَٰطِيرُ ٱلْأَوَّلِينَ (17)"
               "أُو۟لَـٰٓئِكَ ٱلَّذِينَ حَقَّ عَلَيْهِمُ ٱلْقَوْلُ فِىٓ أُمَمٍۢ قَدْ خَلَتْ مِنْ قَبْلِهِمْ مِنَ ٱلْجِنِّ وَٱلْإِنسِ ۚ إِنَّهُمْ كَانُوا۟ خَٰسِرِينَ (18)"
               "وَلِكُلٍّۢ دَرَجَٰتٌۭ مِّمَّا عَمِلُوا۟ ۚ وَلِيُوَفِّيَهُمْ أَعْمَٰلَهُمْ ۚ وَهُمْ لَا يُظْلَمُونَ (19)"
-              "وَيَوْمَ نُحْشَرُ مِنْ كُلِّ أُمَّةٍۢ فَوْجًۭا مِّمَّنْ يُكَذِّبُ بِآيَٰتِنَا فَهُمْ يُوزَعُونَ (20)",
+              "۞ وَيَوْمَ يُعْرَضُ ٱلَّذِينَ كَفَرُوا۟ عَلَى ٱلنَّارِ أَذْهَبْتُمْ طَيِّبَٰتِكُمْ فِى حَيَاتِكُمُ ٱلدُّنْيَا وَٱسْتَمْتَعْتُم بِهَا فَٱلْيَوْمَ تُجْزَوْنَ عَذَابَ ٱلْهُونِ بِمَا كُنتُمْ تَسْتَكْبِرُونَ فِى ٱلْأَرْضِ بِغَيْرِ ٱلْحَقِّ وَبِمَا كُنتُمْ تَفْسُقُونَ (20)",
         ],
       ),
       Werd(
@@ -4771,9 +4771,8 @@ final List<Surah> surahs = [
     surahName: "الضحى",
     surahNumber: 93,
     werd: [
-      Werd(   mp3File: [
-          'audio/93.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/93.mp3'],
         werdFromTo: '1-11',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4786,9 +4785,8 @@ final List<Surah> surahs = [
     surahName: "الشرح",
     surahNumber: 94,
     werd: [
-      Werd(   mp3File: [
-          'audio/94.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/94.mp3'],
         werdFromTo: '1-18',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4801,9 +4799,8 @@ final List<Surah> surahs = [
     surahName: "التين",
     surahNumber: 95,
     werd: [
-      Werd(   mp3File: [
-          'audio/95.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/95.mp3'],
         werdFromTo: '1-8',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4816,9 +4813,8 @@ final List<Surah> surahs = [
     surahName: "العلق",
     surahNumber: 96,
     werd: [
-      Werd(   mp3File: [
-          'audio/96.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/96.mp3'],
         werdFromTo: '1-19',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4831,9 +4827,8 @@ final List<Surah> surahs = [
     surahName: "القدر",
     surahNumber: 97,
     werd: [
-      Werd(   mp3File: [
-          'audio/97.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/97.mp3'],
         werdFromTo: '1-5',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4846,9 +4841,8 @@ final List<Surah> surahs = [
     surahName: "البينة",
     surahNumber: 98,
     werd: [
-      Werd(   mp3File: [
-          'audio/98.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/98.mp3'],
         werdFromTo: '1-8',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4861,9 +4855,8 @@ final List<Surah> surahs = [
     surahName: "الزلزلة",
     surahNumber: 99,
     werd: [
-      Werd(   mp3File: [
-          'audio/99.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/99.mp3'],
         werdFromTo: '1-8',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4876,9 +4869,8 @@ final List<Surah> surahs = [
     surahName: "العاديات",
     surahNumber: 100,
     werd: [
-      Werd(   mp3File: [
-          'audio/100.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/100.mp3'],
         werdFromTo: '1-11',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4891,9 +4883,8 @@ final List<Surah> surahs = [
     surahName: "القارعة",
     surahNumber: 101,
     werd: [
-      Werd( mp3File: [
-          'audio/101.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/101.mp3'],
         werdFromTo: '1-11',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4906,9 +4897,8 @@ final List<Surah> surahs = [
     surahName: "التكاثر",
     surahNumber: 102,
     werd: [
-      Werd( mp3File: [
-          'audio/102.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/102.mp3'],
         werdFromTo: '1-8',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4921,9 +4911,8 @@ final List<Surah> surahs = [
     surahName: "العصر",
     surahNumber: 103,
     werd: [
-      Werd( mp3File: [
-          'audio/103.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/103.mp3'],
         werdFromTo: '1-3',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4936,9 +4925,8 @@ final List<Surah> surahs = [
     surahName: "الهمزة",
     surahNumber: 104,
     werd: [
-      Werd( mp3File: [
-          'audio/104.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/104.mp3'],
         werdFromTo: '1-9',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4951,9 +4939,8 @@ final List<Surah> surahs = [
     surahName: "الفيل",
     surahNumber: 105,
     werd: [
-      Werd( mp3File: [
-          'audio/105.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/105.mp3'],
         werdFromTo: '1-5',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4966,9 +4953,8 @@ final List<Surah> surahs = [
     surahName: "قريش",
     surahNumber: 106,
     werd: [
-      Werd( mp3File: [
-          'audio/106.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/106.mp3'],
         werdFromTo: '1-4',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4981,9 +4967,8 @@ final List<Surah> surahs = [
     surahName: "الماعون",
     surahNumber: 107,
     werd: [
-      Werd( mp3File: [
-          'audio/107.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/107.mp3'],
         werdFromTo: '1-7',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -4996,9 +4981,8 @@ final List<Surah> surahs = [
     surahName: "الكوثر",
     surahNumber: 108,
     werd: [
-      Werd( mp3File: [
-          'audio/108.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/108.mp3'],
         werdFromTo: '1-3',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -5011,9 +4995,8 @@ final List<Surah> surahs = [
     surahName: "الكافرون",
     surahNumber: 109,
     werd: [
-      Werd( mp3File: [
-          'audio/109.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/109.mp3'],
         werdFromTo: '1-6',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -5026,9 +5009,8 @@ final List<Surah> surahs = [
     surahName: "النصر",
     surahNumber: 110,
     werd: [
-      Werd( mp3File: [
-          'audio/110.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/110.mp3'],
         werdFromTo: '1-3',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -5041,9 +5023,8 @@ final List<Surah> surahs = [
     surahName: "المسد",
     surahNumber: 111,
     werd: [
-      Werd( mp3File: [
-          'audio/111.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/111.mp3'],
         werdFromTo: '1-5',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -5056,9 +5037,8 @@ final List<Surah> surahs = [
     surahName: "الاخلاص",
     surahNumber: 112,
     werd: [
-      Werd( mp3File: [
-          'audio/112.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/112.mp3'],
         werdFromTo: '1-4',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -5071,9 +5051,8 @@ final List<Surah> surahs = [
     surahName: "الفلق",
     surahNumber: 113,
     werd: [
-      Werd( mp3File: [
-          'audio/113.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/113.mp3'],
         werdFromTo: '1-5',
         ayats: [
           "بسم الله الرحمن الرحيم",
@@ -5086,9 +5065,8 @@ final List<Surah> surahs = [
     surahName: "الناس",
     surahNumber: 114,
     werd: [
-      Werd( mp3File: [
-          'audio/114.mp3'
-        ],
+      Werd(
+        mp3File: ['audio/114.mp3'],
         werdFromTo: '1-6',
         ayats: [
           "بسم الله الرحمن الرحيم",

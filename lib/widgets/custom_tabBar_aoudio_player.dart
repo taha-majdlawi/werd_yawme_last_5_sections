@@ -22,42 +22,48 @@ class CustomBottombarSound extends StatefulWidget {
 class _CustomBottombarSoundState extends State<CustomBottombarSound> {
   bool isSwitched = false;
   late AudioCubit audioCubit;
+  @override
+  @override
   void initState() {
     super.initState();
     audioCubit = context.read<AudioCubit>();
-    context.read<AudioCubit>().mp3File = widget.mp3File;
-    // Listening for player state changes
-    context.read<AudioCubit>().audioPlayer.onPlayerStateChanged.listen((
-      PlayerState state,
-    ) {
+    audioCubit.mp3File = widget.mp3File;
+
+    // 🔹 الاشتراك في تغيير الموضع
+    audioCubit.audioPlayer.onPositionChanged.listen((Duration p) {
+      if (mounted) {
+        setState(() => audioCubit.position = p);
+      }
+    });
+
+    // 🔹 الاشتراك في تغيير حالة التشغيل
+    audioCubit.audioPlayer.onPlayerStateChanged.listen((PlayerState state) {
       if (mounted) {
         setState(() {
-          context.read<AudioCubit>().playing = state == PlayerState.playing;
+          audioCubit.playing = state == PlayerState.playing;
         });
       }
     });
 
-    // Listen to duration changes
-    context.read<AudioCubit>().audioPlayer.onDurationChanged.listen((
-      Duration d,
-    ) {
+    // 🔹 الاشتراك في تغيير المدة
+    audioCubit.audioPlayer.onDurationChanged.listen((Duration d) {
       if (mounted) {
-        setState(() => context.read<AudioCubit>().duration = d);
-      }
-    });
-
-    // Listen to position changes
-    context.read<AudioCubit>().audioPlayer.onPositionChanged.listen((
-      Duration p,
-    ) {
-      if (mounted) {
-        setState(() => context.read<AudioCubit>().position = p);
+        setState(() => audioCubit.duration = d);
       }
     });
   }
 
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    audioCubit = context.read<AudioCubit>();
+  }
+
+  @override
+  @override
   void dispose() {
+    audioCubit.audioPlayer.dispose();
+    audioCubit.audioPlayer = AudioPlayer(); // إعادة تهيئة AudioPlayer
     super.dispose();
   }
 
@@ -85,22 +91,13 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
               children: [
                 Slider(
                   min: 0,
-                  max: context.read<AudioCubit>().duration.inSeconds.toDouble(),
-                  value: context
-                      .read<AudioCubit>()
-                      .position
-                      .inSeconds
-                      .toDouble()
-                      .clamp(
-                        0.0,
-                        context
-                            .read<AudioCubit>()
-                            .duration
-                            .inSeconds
-                            .toDouble(),
-                      ), // ضبط القيمة داخل الحدود
+                  max: audioCubit.duration.inSeconds.toDouble(),
+                  value: audioCubit.position.inSeconds.toDouble().clamp(
+                    0.0,
+                    audioCubit.duration.inSeconds.toDouble(),
+                  ),
                   onChanged: (value) {
-                    context.read<AudioCubit>().audioPlayer.seek(
+                    audioCubit.audioPlayer.seek(
                       Duration(seconds: value.toInt()),
                     );
                   },
@@ -110,19 +107,11 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 8.0),
-                      child: Text(
-                        AudioCubit.formatTime(
-                          context.read<AudioCubit>().position,
-                        ),
-                      ),
+                      child: Text(AudioCubit.formatTime(audioCubit.position)),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 8.0),
-                      child: Text(
-                        AudioCubit.formatTime(
-                          context.read<AudioCubit>().duration,
-                        ),
-                      ),
+                      child: Text(AudioCubit.formatTime(audioCubit.duration)),
                     ),
                   ],
                 ),
@@ -131,27 +120,25 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
                   children: [
                     IconButton(
                       icon: Icon(
-                        context.read<AudioCubit>().playing
-                            ? Icons.pause
-                            : Icons.play_arrow,
+                        audioCubit.playing ? Icons.pause : Icons.play_arrow,
                       ),
                       onPressed: () async {
-                        if (context.read<AudioCubit>().playing) {
-                          await context.read<AudioCubit>().pauseAudio();
+                        if (audioCubit.playing) {
+                          await audioCubit.pauseAudio();
                         } else {
-                          if (context.read<AudioCubit>().mp3File != null) {
-                            await context.read<AudioCubit>().playAllAyat(
-                              context.read<AudioCubit>().mp3File!,
-                            );
+                          if (audioCubit.mp3File != null) {
+                            await audioCubit.playAllAyat(audioCubit.mp3File!);
+                            setState(() => audioCubit.position = Duration.zero);
+                            audioCubit.mp3File = widget.mp3File;
                           }
                         }
                       },
                     ),
                     IconButton(
                       icon: Icon(Icons.stop),
-                      onPressed: context.read<AudioCubit>().stopAudio,
+                      onPressed: audioCubit.stopAudio,
                     ),
-                    context.read<AudioCubit>().mp3File != null
+                    audioCubit.mp3File != null
                         ? Switch(
                           onChanged: (value) async {
                             setState(() {
@@ -159,31 +146,43 @@ class _CustomBottombarSoundState extends State<CustomBottombarSound> {
                             });
 
                             if (!value) {
-                              context.read<AudioCubit>().stopAudio();
+                              // 🔹 إعادة تعيين المشغل وإيقاف الصوت
+                              await audioCubit.stopAudio();
+                              audioCubit.audioPlayer.dispose();
+                              audioCubit.audioPlayer =
+                                  AudioPlayer(); // إعادة إنشاء المشغل الصوتي
+                              audioCubit.mp3File = widget.mp3File;
+                              // 🔹 إعادة الاشتراك في `onPositionChanged` بعد تعطيل التشغيل التلقائي
+                              audioCubit.audioPlayer.onPositionChanged.listen((
+                                Duration p,
+                              ) {
+                                if (mounted) {
+                                  audioCubit.mp3File = widget.mp3File;
+                                  setState(() => audioCubit.position = p);
+                                }
+                              });
+
+                              audioCubit.playing = false;
+                              audioCubit.mp3File = widget.mp3File;
                               return;
                             }
 
+                        
                             for (int i = 0; i < 500; i++) {
                               if (!isSwitched) {
-                                context.read<AudioCubit>().stopAudio();
+                                await audioCubit.stopAudio();
                                 break;
                               }
 
                               debugPrint('$i');
-                              await audioCubit.playAllAyat(
-                                context.read<AudioCubit>().mp3File!,
-                              );
-
-                              await Future.delayed(
-                                Duration(milliseconds: 500),
-                              );
+                              await audioCubit.playAllAyat(audioCubit.mp3File!);
+                              await Future.delayed(Duration(milliseconds: 500));
                             }
                           },
-
                           value: isSwitched,
                         )
                         : SizedBox(),
-                    context.read<AudioCubit>().mp3File != null
+                    audioCubit.mp3File != null
                         ? Text(
                           'اعادة التشغيل',
                           style: TextStyle(fontSize: 20, fontFamily: 'Amiri'),

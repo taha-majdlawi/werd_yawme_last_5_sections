@@ -5,10 +5,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lastfivesectionsofquran/cubit/audio_cubit/audio_state.dart';
 import 'package:lastfivesectionsofquran/models/werd_model.dart';
 
-
 class AudioCubit extends Cubit<AudioState> {
   AudioCubit(super.initialState);
-   AudioPlayer audioPlayer = AudioPlayer();
+  AudioPlayer audioPlayer = AudioPlayer();
   bool playing = false;
   Duration duration = Duration.zero;
   Duration position = Duration.zero;
@@ -25,6 +24,8 @@ class AudioCubit extends Cubit<AudioState> {
   }
 
   Future<void> playAllAyat(List<String> werdList) async {
+    if (werdList.isEmpty) return; // تأكد من أن القائمة ليست فارغة
+
     for (var file in werdList) {
       await playAudio(file); // Waits for this Ayah to finish
       emit(IsPlaying());
@@ -54,14 +55,14 @@ class AudioCubit extends Cubit<AudioState> {
     return number.toString().padLeft(length, '0');
   }
 
-//  Future<void> playAudioForEver(List<String> url) async {
-//   emit(IsPlaying());
-//   playing = true;
+  //  Future<void> playAudioForEver(List<String> url) async {
+  //   emit(IsPlaying());
+  //   playing = true;
 
-//   // Ensure it only loops while the switch is on
-//   await audioPlayer.setReleaseMode(ReleaseMode.loop);
-//   await audioPlayer.play(AssetSource(url));
-// }
+  //   // Ensure it only loops while the switch is on
+  //   await audioPlayer.setReleaseMode(ReleaseMode.loop);
+  //   await audioPlayer.play(AssetSource(url));
+  // }
 
   Future<void> playAudio(String url) async {
     emit(IsPlaying());
