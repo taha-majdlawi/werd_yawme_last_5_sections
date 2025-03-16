@@ -47,6 +47,7 @@ dev_dependencies:
     sdk: flutter
   hive_generator: ^2.0.1
   build_runner: ^2.4.15
+  flutter_launcher_icons: "^0.14.3"
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -54,6 +55,10 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/splah.jpg"
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -109,6 +114,7 @@ flutter:
     - assets/audio/085/
     - assets/audio/089/
     - assets/audio/
+    - assets/images/splah.jpg
     - assets/audio/sample-9s.mp3
 
   # An image asset can refer to one or more resolution-specific "variants", see
