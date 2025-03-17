@@ -115,7 +115,7 @@ flutter:
     - assets/audio/089/
     - assets/audio/
     - assets/images/splah.jpg
-    - assets/audio/sample-9s.mp3
+    - assets/audio/sample-9s.opus
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
