@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lastfivesectionsofquran/constants.dart';
 import 'package:lastfivesectionsofquran/models/surah_model.dart';
 import 'package:lastfivesectionsofquran/widgets/custom_fav_button.dart';
 import 'package:lastfivesectionsofquran/widgets/custom_werd_list_tile.dart';

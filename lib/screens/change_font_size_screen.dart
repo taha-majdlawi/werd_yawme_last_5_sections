@@ -3,6 +3,8 @@ import 'package:lastfivesectionsofquran/helper/font_size_provider.dart';
 import 'package:provider/provider.dart';
 
 class FontSizeSettingsScreen extends StatelessWidget {
+  const FontSizeSettingsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final fontSizeProvider = Provider.of<FontSizeProvider>(context);

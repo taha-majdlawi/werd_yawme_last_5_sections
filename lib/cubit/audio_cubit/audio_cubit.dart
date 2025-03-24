@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lastfivesectionsofquran/cubit/audio_cubit/audio_state.dart';
-import 'package:lastfivesectionsofquran/models/werd_model.dart';
 
 class AudioCubit extends Cubit<AudioState> {
   AudioCubit(super.initialState);

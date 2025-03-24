@@ -54,7 +54,7 @@ class _ShowWerdScreenState extends State<ShowWerdScreen> {
                 : Color.fromARGB(255, 227, 226, 234),
         title: Text(
           textAlign: TextAlign.right,
-          widget.werd.werdFromTo + '          ' + widget.surah.surahName,
+          '${widget.werd.werdFromTo}          ${widget.surah.surahName}',
           style: TextStyle(fontFamily: 'Amiri'),
         ),
       ),

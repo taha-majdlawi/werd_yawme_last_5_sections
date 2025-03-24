@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
   final ValueChanged<bool> onThemeChanged;
   final ValueChanged<double> onFontSizeChanged;
 
-  HomePage({
+  const HomePage({super.key, 
     required this.isDarkMode,
     required this.onThemeChanged,
     required this.onFontSizeChanged,

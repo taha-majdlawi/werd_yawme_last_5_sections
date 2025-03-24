@@ -23,7 +23,7 @@ class _FavScreenState extends State<FavScreen> {
   }
 
   void getFavList() async {
-    favWerd = await Hive.box<WerdToStore>(kBoxName).values.toList();
+    favWerd = Hive.box<WerdToStore>(kBoxName).values.toList();
     if (favWerd.isEmpty) {
       print('true');
     } else {

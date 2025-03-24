@@ -6,7 +6,7 @@ class CustomDrawer extends StatelessWidget {
   final bool isDarkMode;
   final ValueChanged<bool> onThemeChanged;
 
-  CustomDrawer({required this.isDarkMode, required this.onThemeChanged});
+  const CustomDrawer({super.key, required this.isDarkMode, required this.onThemeChanged});
   @override
   Widget build(BuildContext context) {
     return Drawer(

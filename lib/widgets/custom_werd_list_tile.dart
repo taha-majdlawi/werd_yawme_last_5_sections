@@ -82,9 +82,7 @@ class _CustomWerdListTileState extends State<CustomWerdListTile> {
             title: Center(
               child: Text(
                 widget.isFavScreen
-                    ? widget.surah.werd[widget.index].werdFromTo +
-                        '          ' +
-                        widget.surah.surahName
+                    ? '${widget.surah.werd[widget.index].werdFromTo}          ${widget.surah.surahName}'
                     : widget.surah.werd[widget.index].werdFromTo,
                 style: TextStyle(fontFamily: 'Amiri', fontSize: 20),
               ),
