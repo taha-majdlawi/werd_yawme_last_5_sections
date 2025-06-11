@@ -31,7 +31,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.tahamajdlawi.lastfivesectionsofqurann"
+        applicationId = "com.tahamajdlawi.lastfivesectionsofqurannn"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
